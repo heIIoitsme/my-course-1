@@ -1,0 +1,120 @@
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+aa::before {
+    letter-spacing: normal;
+    content:"";
+    position: absolute;
+    right: 10px;
+}
+
+.subheadline {
+    background:  pink;
+    border-radius: 10px;
+    height: 48px;
+    align-items: center;
+    display: flex;
+}
+
+.subheadline>a {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    padding-left: 15px;
+    color: #A71C29;
+}
+
+.worldtop>a {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    padding-left: 15px;
+    color: #A71C29;
+}
+
+.worldtop {
+    background:#FF808C;
+    border-radius: 10px;
+    height: 300px;
+    align-items: center;
+    display: flex;
+}
+
+.mytop {
+    background:#FF808C;
+    border-radius: 10px;
+    height: 175px;
+    align-items: center;
+    display: flex;
+}
+
+.largeanimebox  {
+    background-color: #fd929c;
+    height: 260px;
+    width: 370px;
+    display: flex;
+    border-radius: 10px;
+    margin-left: 35px;
+}
+
+.smallanimebox  {
+    background-color: #fd929c;
+    height: 135px;
+    width: 190px;
+    display: flex;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.block  {
+    align-items: center;
+}
+
+.largeanimebox>a {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    padding-left: 15px;
+    color: #d15863;
+    flex-direction: column;
+    padding-right: 5px;
+    display: block;
+    height: 250px;
+    overflow: hidden;
+    text-overflow: '...';
+}
+
+.smallanimebox>a {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    font-size: 12px;
+    padding-left: 7px;
+    color: #d15863;
+    flex-direction: column;
+    padding-bottom: 10px;
+    display: block;
+    line-height: 10px;
+}
+
+h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    color: #A71C29;
+    font-weight: normal;
+    margin-bottom: 2px;
+}
+
+h2 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+    color: #A71C29;
+    font-weight: 80;
+}
+
+h3 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+    color: #A71C29;
+    font-weight: normal;
+}
