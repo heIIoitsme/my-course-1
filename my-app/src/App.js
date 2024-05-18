@@ -1,28 +1,19 @@
 import './App.css';
-import Header from './components/header/header.js';
-import Background from './components/background/background.js';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Home from './components/pages/Home.js'
 
-const HomePage = () => {
-  // Здесь может быть логика для загрузки данных для HomePage
-  return (
-    <div>
-      <Header />
-      <Background />
-    </div>
-  );
-};
-
-const TopPage = () => {
-  // Здесь может быть логика для загрузки данных для AboutPage
-  return;
-}
 
 function App() {
   return (
-    <div class='main'>
-      <Header />
-      <Background />
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route exact path='/'>
+            <Home />
+          </Route>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
