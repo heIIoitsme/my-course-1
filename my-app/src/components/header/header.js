@@ -1,5 +1,5 @@
 import logo from '../../logo.svg';
-import '../header/header-styles.css';
+import './header-styles.css';
 import { useState } from 'react';
 
 export default () => {

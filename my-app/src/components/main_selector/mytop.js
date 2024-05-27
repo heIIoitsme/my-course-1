@@ -1,14 +1,16 @@
-import '../main_selector/main_selector.css';
+import './main_selector.css';
 
 export default () => {
     return (
-        <div class='mytop'>
-            <div class='smallanimebox'>
-                <img src='img/frieren.jpeg' />
-                <a><h3>Провожающая в последний путь Фрирен</h3> Sousou no Frieren </a>
+        <div class='worldtop'>
+            <div style={{ width: '190px' }}>
+                <div className='smallanimebox'>
+                    <img src='img/frieren.jpeg'/>
+                    <a><h3>Провожающая в последний путь Фрирен</h3> Sousou no Frieren </a>
+                </div>
             </div>
             <div class='smallanimebox'>
-                <img src='img/stein.jpeg' />
+                <img src='img/stein.jpeg'/>
                 <a><h3>Врата Штейна</h3> Steins;Gate </a>
             </div>
             <div class='smallanimebox'>
