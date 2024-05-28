@@ -1,11 +1,3 @@
-
-aa::before {
-    letter-spacing: normal;
-    content:"";
-    position: absolute;
-    right: 10px;
-}
-
 .subheadline {
     background:  pink;
     border-radius: 10px;
@@ -35,24 +27,23 @@ aa::before {
     border-radius: 10px;
     align-items: center;
     display: flex;
-    overflow: hidden;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 20px;
     padding: 20px;
-    gap: 100px;
+    justify-content: space-between;
 }
 
-.mytop {
-    background:#FF808C;
-    border-radius: 10px;
-    height: 175px;
-    align-items: center;
-    display: flex;
-    overflow: hidden;
+.worldtop::-webkit-scrollbar {
+    display: none;
 }
 
 .largeanimebox  {
     background-color: #fd929c;
     height: 260px;
     width: 370px;
+    min-width: 370px;
     display: flex;
     border-radius: 10px;
 }
@@ -60,7 +51,8 @@ aa::before {
 .smallanimebox  {
     background-color: #fd929c;
     height: 135px;
-    width: 100%;
+    width: 190px;
+    min-width: 190px;
     display: flex;
     border-radius: 10px;
 }
