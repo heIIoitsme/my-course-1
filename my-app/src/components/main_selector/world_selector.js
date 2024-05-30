@@ -1,23 +1,16 @@
 import '../main_selector/main_selector.css';
-import Worldtop from './worldtop.js';
-import Mytop from './mytop.js';
+import Worldtop_2 from "./worldtop_2";
 
 export default () => {
     return (
         <div>
-            <div class='block'>
+            <div class='block_2'>
                 <div class='subheadline'>
                     <a href="WorldTop">
                         Лучшие рейтинги
                     </a>
                 </div>
-            <Worldtop />
-                <div class='subheadline'>
-                    <a href="MyTop">
-                        Мои оценки
-                    </a>
-                </div>
-            <Mytop />
+                <Worldtop_2/>
             </div>
         </div>
     )

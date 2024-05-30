@@ -1,14 +1,14 @@
 import React from 'react';
 import Background from "../components/background/background.js";
-import Header from "../components/header/header.js";
+import './media_style.css'
 
 function Home() {
     return (
-      <div style={{ width:'67%'}}>
-        <Background />;
+      <div className='mstyle'>
+        <Background />
       </div>
-    );
-  }
+    )
+}
 
-  export default Home;
+export default Home
 

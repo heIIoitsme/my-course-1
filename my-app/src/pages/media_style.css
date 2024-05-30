@@ -1,0 +1,10 @@
+.mstyle {
+    width: 67%;
+    @media (min-width: 1280px) {
+        width: 1280px;
+        min-width: 1280px
+    };
+    @media (max-width: 1281px) {
+        width: 100%;
+    }
+}

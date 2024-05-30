@@ -1,11 +1,13 @@
 import React from 'react';
-// import Block from '../main_selector/main_selector.js';
+import '../components/background/background-styles.css'
+import Background_wt from "../components/background/background_wt";
 
-function Home() {
+function WorldTop() {
     return (
-      <div>
-      </div>
+        <div className='mstyle'>
+            <Background_wt />
+        </div>
     );
-  }
+}
 
-  export default WorldTop;
+export default WorldTop;
