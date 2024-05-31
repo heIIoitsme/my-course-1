@@ -8,13 +8,30 @@ header {
     justify-content: center;
     position: sticky;
     top: 0;
-    min-height: 1em
+    min-height: 1em;
 }
 
-.search-input {
+.searchstl {
     border-radius: 10px;
-    width: 50%;
-    height: 35px;
-    text-align: left;
+    width: 50vw;
+    max-width: 1000px;
+    height: 45px;
+    padding: 8px 45px 2px 45px;
+    text-overflow: ellipsis;
   }
 
+.searchstl::placeholder {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fd929c;
+    font-size: 24px;
+    opacity: 0.5;
+}
+
+.search-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}

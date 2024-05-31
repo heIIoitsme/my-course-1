@@ -1,5 +1,6 @@
 import {cardList} from "../../global_const/card_const";
 import React from "react";
+import { useLocation } from 'react-router-dom';
 
 
 export const allcards = (
@@ -44,3 +45,16 @@ export const largecard = (
         )
     )
 )
+
+export const SearchResults = () => {
+    const location = useLocation();
+    const { searchResults } = location.state;
+
+    return (
+        <div>
+            {searchResults.map((item) => (
+                <div key={item.id}>{item.ru_name}</div>
+            ))}
+        </div>
+    );
+};
