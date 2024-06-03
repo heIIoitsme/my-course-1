@@ -1,26 +1,29 @@
 import React, {useState} from "react";
-import {useNavigate} from 'react-router-dom';
 import {cardList} from "../../global_const/card_const";
 import './header-styles.css';
 
 
+ export const searchArr = cardList.filter(item =>
+    item.ru_name.toLowerCase().includes(query.toLowerCase())
+);
+
 const SearchBar = () => {
     const [query, setQuery] = useState('');
-    const navigate = useNavigate();
+    let [searchResults, setSearchResults] = useState([]);
 
     const handleSearch = (event) => {
         if (event.key === 'Enter') {
             // Фильтрация cardList для поиска совпадений
-            const searchResults = cardList.filter(item =>
+            searchResults = cardList.filter(item =>
                 item.ru_name.toLowerCase().includes(query.toLowerCase())
             );
-            // Передача результатов поиска через состояние маршрутизатора
-            navigate('/SearchRes', { state: { searchResults } });
+            setSearchResults(searchResults)
         }
     };
 
     return (
         <header>
+            <form action='/SearchRes' method="get">
                 <input
                     className='searchstl'
                     type="search"
@@ -29,9 +32,9 @@ const SearchBar = () => {
                     onKeyPress={handleSearch}
                     placeholder="Поиск..."
                 />
+            </form>
         </header>
-    )
-        ;
+)
 };
 
 export default SearchBar;

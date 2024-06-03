@@ -12,6 +12,7 @@ export default () => {
                     </a>
                 </div>
             <Worldtop />
+                <br />
                 <div class='subheadline'>
                     <a href="MyTop">
                         Мои оценки

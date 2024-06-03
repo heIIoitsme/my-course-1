@@ -1,7 +1,6 @@
 import {cardList} from "../../global_const/card_const";
 import React from "react";
-import { useLocation } from 'react-router-dom';
-
+import {searchArr} from "../header/search-bar";
 
 export const allcards = (
     cardList.map(item =>
@@ -46,15 +45,17 @@ export const largecard = (
     )
 )
 
-export const SearchResults = () => {
-    const location = useLocation();
-    const { searchResults } = location.state;
-
-    return (
-        <div>
-            {searchResults.map((item) => (
-                <div key={item.id}>{item.ru_name}</div>
-            ))}
-        </div>
-    );
-};
+export const searchcard = (
+    searchArr.map(item =>
+        (
+            <div className='largeanimebox'>
+                <img src={ item.img }/>
+                <a>
+                    <h1>{ item.ru_name }</h1>
+                    { item.en_name }
+                    <h2>{ item.sinops }</h2>
+                </a>
+            </div>
+        )
+    )
+)

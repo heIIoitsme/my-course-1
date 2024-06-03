@@ -1,11 +1,12 @@
 import '../background/background-styles.css';
 import React from 'react';
-import {SearchResults} from '../slots/slot.js';
+import {searchcard} from "../slots/slot";
+
 
 export default () => {
     return (
         <div class='background'>
-            {SearchResults}
+            {searchcard}
         </div>
     )
 }
