@@ -1,6 +1,5 @@
 import {cardList} from "../../global_const/card_const";
 import React from "react";
-import {searchArr} from "../header/search-bar";
 
 export const allcards = (
     cardList.map(item =>
@@ -45,17 +44,3 @@ export const largecard = (
     )
 )
 
-export const searchcard = (
-    searchArr.map(item =>
-        (
-            <div className='largeanimebox'>
-                <img src={ item.img }/>
-                <a>
-                    <h1>{ item.ru_name }</h1>
-                    { item.en_name }
-                    <h2>{ item.sinops }</h2>
-                </a>
-            </div>
-        )
-    )
-)
