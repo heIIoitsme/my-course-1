@@ -1,24 +1,32 @@
 import '../main_selector/main_selector.css';
 import Worldtop from './worldtop.js';
 import Mytop from './mytop.js';
+import Tags_selector from "./tags_selector";
 
 export default () => {
     return (
         <div>
-            <div class='block'>
-                <div class='subheadline'>
+            <div className='block'>
+                <div className='subheadline'>
                     <a href="WorldTop">
                         Лучшие рейтинги
                     </a>
                 </div>
-            <Worldtop />
-                <br />
-                <div class='subheadline'>
+                <Worldtop/>
+                <br/>
+                <div className='subheadline'>
                     <a href="MyTop">
                         Мои оценки
                     </a>
                 </div>
-            <Mytop />
+                <Mytop/>
+                <br/>
+                <div className='subheadline'>
+                    <a>
+                        Поиск по тегам
+                    </a>
+                </div>
+                <Tags_selector />
             </div>
         </div>
     )

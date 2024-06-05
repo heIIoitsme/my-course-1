@@ -7,12 +7,12 @@ export default (props) => {
     return (
         <div class='background'>
             <div class='subheadline'>
-                <a href="MyTop">
+                <a>
                     Результаты поиска:
                 </a>
             </div>
             <div class='card_container_2'>
-                {filterByString(props.q).map(item => (
+              {filterByString(props.q).map(item => (
                     <div className='fullanimebox'>
                         <img src={ item.img }/>
                         <a>

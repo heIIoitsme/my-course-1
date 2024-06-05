@@ -13,6 +13,7 @@ const SearchBar = () => {
                     type="search"
                     name="q"
                     placeholder="Поиск..."
+                    autoComplete='on'
                 />
             </form>
         </header>
