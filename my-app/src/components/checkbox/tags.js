@@ -5,8 +5,13 @@ function Tag({allTags}) {
 
     const [checkedValues, setCheckedValues] = useState([])
     const addValues = (newValue) => {
-        checkedValues.includes(newValue) ? setCheckedValues([...checkedValues].]) : setCheckedValues([...checkedValues, newValue])
-    }
+        if (checkedValues.includes(newValue)) {
+            setCheckedValues(checkedValues.filter((value) => value !== newValue));
+        } else {
+            setCheckedValues([...checkedValues, newValue]);
+        }
+    };
+
     return <form className='form'>
             {
                 allTags.map(item =>

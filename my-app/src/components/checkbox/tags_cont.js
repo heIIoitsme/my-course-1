@@ -4,14 +4,13 @@ import './tags_styles.css'
 export const CheckBox = ({ isChecked, onChange, children }) => {
     return (
         <label className='checkbox-wrapper'>
+            <p className='tagName'>{children}</p>
             <input
                 type='checkbox'
                 className='checkbox-element'
                 name='tags'
                 checked={isChecked}
-                onChange={() => onChange(children)}
-            />
-            <p>{children}</p>
+                onChange={() => onChange(children)}></input>
         </label>
-    )
+)
 }
