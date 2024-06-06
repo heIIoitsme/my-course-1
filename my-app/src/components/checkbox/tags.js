@@ -1,5 +1,5 @@
 import {React, useState} from "react";
-import {CheckBox} from "./tags_cont";
+import {CheckBox} from "./tags-bar";
 
 function Tag({allTags}) {
 
@@ -12,7 +12,7 @@ function Tag({allTags}) {
         }
     };
 
-    return <form className='form'>
+    return <form className='form' action="/TagRes">
             {
                 allTags.map(item =>
                     <CheckBox isChecked={checkedValues.includes(item)} onChange={addValues}>{item}</CheckBox>

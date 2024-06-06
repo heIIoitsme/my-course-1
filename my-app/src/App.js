@@ -4,6 +4,7 @@ import Home from './pages/Home.js'
 import Header from "./components/header/header";
 import WorldTop from "./pages/WorldTop";
 import SearchRes from "./pages/SearchRes";
+import TagRes from "./pages/TagRes";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
                 <Route path='/' element={<Home/>}/>
                 <Route path='/WorldTop' element={<WorldTop/>}/>
                 <Route path='/SearchRes' element={<SearchRes/>}/>
+                <Route path='/TagRes' element={<TagRes/>}/>
             </Routes>
         </div>
     </Router>

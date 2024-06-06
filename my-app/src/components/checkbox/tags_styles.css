@@ -4,6 +4,13 @@
     width: 140px;
     height: 30px;
     align-items: center;
+    justify-content: center;
+}
+
+.checkbox-wrapper>p {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #d15863;
+    height: 14px;
 }
 
 .checkbox-element {
@@ -19,7 +26,8 @@
 }
 
 .checkbox-element:checked{
-    background-color: #A71C29;
+    background-color: #fd929c;
+    border: 2px solid #A71C29;
 }
 
 

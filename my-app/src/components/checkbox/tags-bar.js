@@ -8,7 +8,9 @@ export const CheckBox = ({ isChecked, onChange, children }) => {
             <input
                 type='checkbox'
                 className='checkbox-element'
-                name='tags'
+                name='t'
+                value={children}
+                placeholder="Поиск..."
                 checked={isChecked}
                 onChange={() => onChange(children)}></input>
         </label>
