@@ -13,7 +13,7 @@ function Tag({allTags}) {
     };
 
     return <form className='form' action="/TagRes" id='tagForm'>
-        <div style={{'overflow-x': 'scroll', padding: '4px'}}>
+        <div className='AT_container'>
             <div className='allTags'>
                 {
                     allTags.map(item =>
@@ -22,9 +22,8 @@ function Tag({allTags}) {
                 }
             </div>
         </div>
-
-        <div style={{height: '30px'}}>
-            <button className='buttOn'>Поиск</button>
+        <div className='button_container'>
+            <button className='buttOn' form='tagForm'>Поиск</button>
         </div>
     </form>;
 }

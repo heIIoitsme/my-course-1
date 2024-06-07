@@ -30,12 +30,26 @@
     border: 2px solid #A71C29;
 }
 
+.AT_container {
+    overflow-x: scroll;
+    padding: 24px
+}
 
 .allTags {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 45px;
     row-gap: 20px;
+    justify-items: center;
+}
+
+.AT_container::-webkit-scrollbar {
+    display: none;
+}
+
+.button_container {
+    padding: 4px 0px 4px 20px;
+    box-shadow: 0px -4px 8px #c65a66;
 }
 
 .tagName {
@@ -47,8 +61,8 @@
 .form {
     width: 100%;
     display: grid;
-    gap: 25px;
     position: relative;
+    overflow: hidden;
 }
 
 .buttOn {
@@ -61,4 +75,5 @@
     color: #d15863;
     font-size: 20px;
     position: sticky;
+    margin: 3px;
 }
