@@ -2,6 +2,7 @@ import '../main_selector/main_selector.css';
 import Worldtop from './worldtop.js';
 import Mytop from './mytop.js';
 import Tags_selector from "./tags_selector";
+import React from "react";
 
 export default () => {
     return (
@@ -26,7 +27,7 @@ export default () => {
                         Поиск по тегам
                     </a>
                 </div>
-                <Tags_selector />
+                <Tags_selector/>
             </div>
         </div>
     )

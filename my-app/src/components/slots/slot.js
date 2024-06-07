@@ -9,6 +9,7 @@ export const allcards = (
                 <h1>{item.ru_name}</h1>
                 {item.en_name}
                 <h2>{item.sinops}</h2>
+                <br/>Жанры: {item.tags.join(', ')}
             </a>
         </div>
     )

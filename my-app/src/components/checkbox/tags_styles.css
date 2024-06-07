@@ -31,7 +31,7 @@
 }
 
 
-.form {
+.allTags {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 45px;
@@ -42,4 +42,23 @@
     position: absolute;
     z-index: 2;
     text-align: center
+}
+
+.form {
+    width: 100%;
+    display: grid;
+    gap: 25px;
+    position: relative;
+}
+
+.buttOn {
+    height: 30px;
+    width: 140px;
+    border-radius: 10px;
+    background-color: #fd929c;
+    border:none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #d15863;
+    font-size: 20px;
+    position: sticky;
 }

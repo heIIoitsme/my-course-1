@@ -5,7 +5,7 @@ import {allTags} from "../../global_const/card_const";
 
 export default () => {
     return (
-        <div class='card_container'>
+        <div class='tag_card_container'>
             <Tag allTags={allTags()} />
         </div>
     )

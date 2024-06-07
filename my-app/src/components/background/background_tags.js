@@ -1,4 +1,4 @@
-import {filterByString} from "../../global_const/tags_results_const";
+import {filterByString, tagsFromUrl} from "../../global_const/tags_results_const";
 import React from "react";
 
 export default (props) => {
@@ -8,9 +8,11 @@ export default (props) => {
                 <a>
                     Подходящие аниме:
                 </a>
+                <p>{tagsFromUrl()}</p>
             </div>
             <div class='card_container_2'>
-                {filterByString(props.t).map(item => (
+                {props.t && props.t.length > 0 ?
+                    (filterByString(props.t).map(item => (
                     <div className='fullanimebox'>
                         <img src={ item.img }/>
                         <a>
@@ -19,7 +21,7 @@ export default (props) => {
                             <h2>{ item.sinops }</h2>
                         </a>
                     </div>
-                ))}
+                ))) : (<p >Отсуствует запрос</p>)}
             </div>
         </div>
     )

@@ -7,6 +7,7 @@ import SearchBar from "./search-bar";
 export default () => {
     return (
         <header>
+            <a href='/'><img src='img/favicon.ico'/></a>
             <SearchBar />
         </header>
     )
