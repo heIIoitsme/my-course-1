@@ -1,5 +1,5 @@
 import '../main_selector/main_selector.css';
-import {allcards, largecard} from "../slots/slot";
+import {largecard} from "../slots/slot";
 
 export default () => {
     return (
