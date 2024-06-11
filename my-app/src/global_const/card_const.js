@@ -1,5 +1,4 @@
-import Background from "../components/background/background";
-import React from "react";
+
 
 export const WatchedStatus = {
     Watched:'Просмотрено',

@@ -1,6 +1,7 @@
 import {cardList, WatchedStatus} from "../../global_const/card_const";
 import React, {useState} from "react";
 import {toggleWatchedStatus} from "../../global_const/watched_const";
+import {userData} from "../../global_const/userProfile";
 
 export function AllCards() {
     const [cards, setCardsState] = useState(cardList)
@@ -17,7 +18,6 @@ export function AllCards() {
                 type='checkbox'
                 checked={item.watched === WatchedStatus.Watched}
                 onChange={() => {
-
                     toggleWatchedStatus(item.id, cards, setCardsState)
                 }}
             />
@@ -54,3 +54,20 @@ export const largecard = (
         )
     )
 )
+
+export function ViewedCard() {
+    console.log(JSON.stringify(userData))
+    const viewedCards = cardList.filter(item => item.id === userData.watched)
+    return viewedCards.map(item =>
+        (
+            <div className='fullanimebox'>
+                <img src={ item.img }/>
+                <a>
+                    <h1>{ item.ru_name }</h1>
+                    { item.en_name }
+                    <h2>{ item.sinops }</h2>
+                </a>
+            </div>
+        )
+    )
+}

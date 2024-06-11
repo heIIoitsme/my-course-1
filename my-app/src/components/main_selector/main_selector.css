@@ -1,5 +1,5 @@
 .subheadline {
-    background:  pink;
+    background:  #FFC0CBFF;
     border-radius: 10px;
     height: 48px;
     align-items: center;
@@ -87,6 +87,10 @@
     display: none;
 }
 
+.largeanimebox>a::-webkit-scrollbar {
+    display: none;
+}
+
 .largeanimebox  {
     background-color: #fd929c;
     height: 260px;
@@ -125,8 +129,7 @@
     padding-right: 5px;
     display: block;
     height: 250px;
-    overflow: hidden;
-    text-overflow: '...';
+    overflow: scroll;
 }
 
 .smallanimebox>a {
@@ -160,7 +163,7 @@
 
 .fullanimebox>a>h1 {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 28px;
+    font-size: 24px;
     color: #A71C29;
     font-weight: normal;
     margin-bottom: 2px;
@@ -170,14 +173,6 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 16px;
     color: #A71C29;
-    margin-bottom: 2px;
-}
-
-.fullanimebox>a>h1 {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 28px;
-    color: #A71C29;
-    font-weight: normal;
     margin-bottom: 2px;
 }
 

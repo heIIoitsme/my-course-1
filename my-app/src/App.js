@@ -5,6 +5,7 @@ import Header from "./components/header/header";
 import WorldTop from "./pages/WorldTop";
 import SearchRes from "./pages/SearchRes";
 import TagRes from "./pages/TagRes";
+import MyAnime from "./pages/MyAnime";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
                 <Route path='/WorldTop' element={<WorldTop/>}/>
                 <Route path='/SearchRes' element={<SearchRes/>}/>
                 <Route path='/TagRes' element={<TagRes/>}/>
+                <Route path='/MyAnime' element={<MyAnime/>}/>
             </Routes>
         </div>
     </Router>
