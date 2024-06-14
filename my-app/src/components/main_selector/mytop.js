@@ -1,11 +1,11 @@
 import './main_selector.css';
 import React from "react";
-import {ViewedCard} from "../slots/slot";
+import {SmallViewedCard} from "../slots/slot";
 
 export default () => {
     return (
         <div class='card_container'>
-            <ViewedCard/>
+            <SmallViewedCard/>
         </div>
     )
 }

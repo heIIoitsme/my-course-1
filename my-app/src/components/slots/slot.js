@@ -14,24 +14,26 @@ export function AllCards() {
     useEffect(() => {
         localStorage.setItem('idWatched', JSON.stringify(idWatched));
     }, [idWatched]);
-    return cardList.map(item =>
+    return cardList.sort((a, b) => b.rate - a.rate).map(item =>
         <div className='fullanimebox'>
             <img src={item.img}/>
-            <a>
-                <h1>{item.ru_name}</h1>
-                {item.en_name}
-                <h2>{item.sinops}</h2>
-                <br/>Жанры: {item.tags.join(', ')}
-                <br/><br/><label> Просмотрено
-                <input
-                    type='checkbox'
-                    checked={idWatched.includes(item.id)}
-                    onChange={() => {
-                        toggleWatchedStatus(item.id, idWatched, setIdWatched)
-                    }}
-                />
-            </label>
-            </a>
+            <div className='fullanimebox_text'>
+                <a>
+                    <h1><a>{item.ru_name}</a><a>{item.rate}</a></h1>
+                    {item.en_name}
+                    <h2>{item.sinops}</h2>
+                    <br/>Жанры: {item.tags.join(', ')}
+                </a>
+                <label className='viewed_container'> Просмотрено
+                    <input
+                        type='checkbox'
+                        checked={idWatched.includes(item.id)}
+                        onChange={() => {
+                            toggleWatchedStatus(item.id, idWatched, setIdWatched)
+                        }}
+                    />
+                </label>
+            </div>
         </div>
     )
 }
@@ -45,8 +47,8 @@ export const smallcard = (
                         <h3>{item.ru_name}</h3>
                         {item.en_name}
                     </a>
+                </div>
             </div>
-        </div>
         )
     )
 )
@@ -74,11 +76,36 @@ export function ViewedCard() {
         (
             <div className='fullanimebox'>
                 <img src={ item.img }/>
-                <a>
+                <div className='fullanimebox_text'>
+                    <a>
                     <h1>{ item.ru_name }</h1>
                     { item.en_name }
                     <h2>{ item.sinops }</h2>
-                </a>
+                    </a>
+                </div>
+            </div>
+        )
+    )
+}
+
+export function SmallViewedCard() {
+    const watchedAnime = getWatched()
+    console.log(watchedAnime)
+    const viewedCards = cardList.filter(item => watchedAnime.includes(item.id))
+    
+    if (viewedCards.length === 0) {
+        return <p>Нет просмотренных аниме</p>
+    }
+    return viewedCards.slice(0, 6).map(item =>
+        (
+            <div style={{width: '190px'}}>
+                <div className='smallanimebox'>
+                    <img src={item.img}/>
+                    <a>
+                        <h3>{item.ru_name}</h3>
+                        {item.en_name}
+                    </a>
+                </div>
             </div>
         )
     )

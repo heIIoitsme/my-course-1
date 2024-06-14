@@ -17,7 +17,7 @@ export default () => {
                 <br/>
                 <div className='subheadline'>
                     <a href="MyAnime">
-                        Мои оценки
+                        Просмотренные аниме
                     </a>
                 </div>
                 <Mytop/>

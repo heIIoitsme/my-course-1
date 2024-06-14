@@ -42,8 +42,15 @@
     -ms-overflow-style: none;
     gap: 10px;
     padding: 20px;
-    justify-content: space-between;
+    justify-content: space-around;
     box-shadow: inset 0px 4px 8px #c65a66;
+}
+
+.card_container>p {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #A71C29;
+    font-size: 50px;
+    opacity: 0.5;
 }
 
 .tag_card_container {
@@ -79,11 +86,20 @@
     opacity: 0.5;
 }
 
+.viewed_container{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px 5px 10px 15px;
+    color: #d15863;
+    height: 15px;
+    display: flex;
+    align-items: center;
+}
+
 .card_container::-webkit-scrollbar {
     display: none;
 }
 
-.fullanimebox>a::-webkit-scrollbar {
+.fullanimebox_text>a::-webkit-scrollbar {
     display: none;
 }
 
@@ -116,6 +132,11 @@
     border-radius: 10px;
 }
 
+.fullanimebox_text{
+    display: flex;
+    flex-direction: column;
+}
+
 .block  {
     align-items: center;
 }
@@ -144,13 +165,13 @@
     line-height: 10px;
 }
 
-.fullanimebox>a {
+.fullanimebox_text>a {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: none;
     padding-left: 15px;
     color: #d15863;
     flex-direction: column;
-    padding-right: 5px;
+    padding-right: 15px;
     display: block;
     height: 300px;
     overflow: scroll;
@@ -161,15 +182,15 @@
     height: 315px;
 }
 
-.fullanimebox>a>h1 {
+.fullanimebox_text>a>h1 {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 24px;
     color: #A71C29;
-    font-weight: normal;
-    margin-bottom: 2px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.fullanimebox>a>h2 {
+.fullanimebox_text>a>h2 {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 16px;
     color: #A71C29;

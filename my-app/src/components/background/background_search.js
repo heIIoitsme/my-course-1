@@ -12,15 +12,17 @@ export default (props) => {
                 </a>
             </div>
             <div class='card_container_2'>
-                {props.q && props.q.length > 0 ?
+                {filterByString(props.q).length && (props.q).length > 0 ?
                     (filterByString(props.q).map(item => (
                     <div className='fullanimebox'>
                         <img src={ item.img }/>
+                        <div className='fullanimebox_text'>
                         <a>
                             <h1>{ item.ru_name }</h1>
                             { item.en_name }
                             <h2>{ item.sinops }</h2>
                         </a>
+                        </div>
                     </div>
                     ))) : (<p >Отсуствуют результаты</p>)}
             </div>
