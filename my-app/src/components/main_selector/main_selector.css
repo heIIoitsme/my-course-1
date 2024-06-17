@@ -24,6 +24,11 @@
     color: #A71C29;
 }
 
+.subheadline>a:hover {
+    color: #c52130;
+    text-decoration: underline;
+}
+
 .worldtop>a {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 16px;
@@ -92,7 +97,18 @@
     color: #d15863;
     height: 15px;
     display: flex;
-    align-items: center;
+}
+
+a.no-hover:hover {
+    text-decoration: none; /* Убираем подчеркивание при наведении */
+    color: #A71C29;
+    cursor: default; /* Стандартный курсор вместо указателя */
+}
+
+.smallcheckbox {
+    height: 15px;
+    width: 15px;
+    border-radius: 2px;
 }
 
 .card_container::-webkit-scrollbar {
@@ -116,6 +132,12 @@
     border-radius: 10px;
 }
 
+.largeanimebox>img {
+     height: 260px;
+     min-width: 185px; /* Минимальная ширина контейнера */
+     max-width: 100%;
+ }
+
 .smallanimebox  {
     background-color: #fd929c;
     height: 135px;
@@ -123,6 +145,12 @@
     min-width: 190px;
     display: flex;
     border-radius: 10px;
+}
+
+.smallanimebox>img {
+    height: 135px;
+    min-width: 95px; /* Минимальная ширина контейнера */
+    max-width: 100%;
 }
 
 .fullanimebox {
@@ -180,6 +208,8 @@
 
 .fullanimebox>img {
     height: 315px;
+    min-width: 240px; /* Минимальная ширина контейнера */
+    max-width: 100%;
 }
 
 .fullanimebox_text>a>h1 {

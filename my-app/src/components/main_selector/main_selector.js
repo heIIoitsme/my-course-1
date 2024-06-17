@@ -1,6 +1,6 @@
 import '../main_selector/main_selector.css';
 import Worldtop from './worldtop.js';
-import Mytop from './mytop.js';
+import Mytop from './myanime.js';
 import Tags_selector from "./tags_selector";
 import React from "react";
 
@@ -23,7 +23,7 @@ export default () => {
                 <Mytop/>
                 <br/>
                 <div className='subheadline'>
-                    <a>
+                    <a className='no-hover'>
                         Поиск по тегам
                     </a>
                 </div>

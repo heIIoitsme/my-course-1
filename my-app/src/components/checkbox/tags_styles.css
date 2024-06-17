@@ -37,7 +37,7 @@
 
 .allTags {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     column-gap: 45px;
     row-gap: 20px;
     justify-items: center;
@@ -77,4 +77,8 @@
     position: sticky;
     margin: 3px;
     box-shadow: 0px 4px 8px #c65a66;
+}
+
+.buttOn:active {
+    box-shadow: 0px 2px 2px #c65a66;
 }

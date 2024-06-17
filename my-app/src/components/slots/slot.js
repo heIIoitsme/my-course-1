@@ -2,6 +2,7 @@ import {cardList, WatchedStatus} from "../../global_const/card_const";
 import React, {useEffect, useState} from "react";
 import {toggleWatchedStatus} from "../../global_const/watched_const";
 import {userData} from "../../global_const/userProfile";
+import {StarRating} from "../star_rating/star_rating";
 
 function getWatched() {
     const allId = localStorage.getItem('idWatched')
@@ -26,6 +27,7 @@ export function AllCards() {
                 </a>
                 <label className='viewed_container'> Просмотрено
                     <input
+                        className='smallcheckbox'
                         type='checkbox'
                         checked={idWatched.includes(item.id)}
                         onChange={() => {
@@ -82,6 +84,7 @@ export function ViewedCard() {
                     { item.en_name }
                     <h2>{ item.sinops }</h2>
                     </a>
+                    <StarRating/>
                 </div>
             </div>
         )
