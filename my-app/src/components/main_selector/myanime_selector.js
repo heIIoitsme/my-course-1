@@ -6,7 +6,7 @@ export default () => {
     return (
         <div>
             <div className='subheadline'>
-                <a href="WorldTop">
+                <a href="MyAnime">
                     Просмотренные аниме
                 </a>
             </div>
